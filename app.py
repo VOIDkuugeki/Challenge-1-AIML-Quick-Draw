@@ -9,8 +9,7 @@ app = Flask(__name__)
 # Load trained model and class labels
 model = tf.keras.models.load_model('cnn.h5')
 model.make_predict_function()
-# with open('model/class_names.txt', 'r') as file:
-#     class_labels = file.read().splitlines()
+
 with open('./model/class_names.txt', 'r') as file:
     class_labels = file.read().splitlines()
 
